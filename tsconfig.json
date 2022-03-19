@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "lib",
     "target": "es5",
     "lib": [
       "dom",
@@ -11,16 +12,27 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": false,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": true,
+    "declaration": true,
+    "noEmit": false
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
